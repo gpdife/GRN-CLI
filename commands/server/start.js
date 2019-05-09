@@ -8,7 +8,6 @@ const parseCommand = require("../../tools/parseCommand");
 const kill = require("cross-port-killer").kill;
 const printHelp = require('../../tools/printHelp');
 const patch = require('../pack/patch');
-const semver = require('semver');
 
 const MODULES_RN_PATH = path.resolve(
   "node_modules",

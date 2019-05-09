@@ -1,7 +1,7 @@
 'use strict';
 
 const optimistModule = require('optimist');
-const minimistModule = require('minimist');
+// const minimistModule = require('minimist');
 function parseCommandLine(config, args) {
   let optimist = new optimistModule();
   args = args || process.argv;

@@ -21,8 +21,7 @@ function init() {
 	return new Promise(resolve => {
 		let args = process.argv.slice(2);
 		let projectName = args[1];
-		let projectPath = path.resolve(projectName);
-
+		
 		if (args.length < 2 || args[1] == '--help' || args[1] == '-h' || args[1] == '-H') {
 			printHelp('init');
 			resolve();
@@ -30,7 +29,7 @@ function init() {
 		}
 
 		validateProjectName(projectName)
-
+		let projectPath = path.resolve(projectName);
 		if (fs.existsSync(projectPath)) {
 			logOutput.warn('project name is already exist');
 			// 如果已存在改模块，提问开发者是否覆盖该模块
@@ -80,7 +79,8 @@ function validateProjectName(name) {
       '"%s" is not a valid name for a project. Please use a valid identifier ' +
         'name (alphanumeric).',
       name,
-    );
+		);
+		printHelp('init');
     process.exit(1);
   }
 
@@ -89,7 +89,8 @@ function validateProjectName(name) {
       '"%s" is not a valid name for a project. Please do not use the ' +
         'reserved word "React".',
       name,
-    );
+		);
+		printHelp('init');
     process.exit(1);
   }
 }

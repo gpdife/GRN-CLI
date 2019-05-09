@@ -37,7 +37,10 @@ result instanceof Promise ? result.catch(err => {
 function getDocumentCmds(commandName) {
   let documentCmds = {
     "init": [require("./commands/init/init"), "init project"],
-    // "start": [require("./commands/server/start"), "start server"],
+    "start": [require("./commands/server/start"), "start server"],
+    "run-ios": [require("./commands/runIOS/runIOS"), "start ios"],
+    "run-android": [require("./commands/runAndroid/runAndroid"), "strart android"],
+    'pack': [require("./commands/pack/localPack"), "pack"],
     "--help": [printHelp, "show help"],
     "-h": [printHelp, "show help"],
     "--version": [printVersion, "show version"],
