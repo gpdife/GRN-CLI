@@ -1,0 +1,32 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "grn-cli start",
+    "android": "grn-cli run-android",
+    "ios": "grn-cli run-ios",
+    "pack": "grn-cli pack"
+  },
+  "packConfig": {
+    "entryFile": "index.js",
+    "bundleOutput": "publish",
+    "packageName": "GRNDemo",
+    "dev": false
+  },
+  "dependencies": {
+    "@react-native-community/cli": "1.4.5",
+    "metro": "0.51.0",
+    "metro-config": "0.51.0",
+    "metro-core": "0.51.0",
+    "metro-memory-fs": "0.51.0",
+    "metro-react-native-babel-transformer": "0.51.0",
+    "react": "16.8.3",
+    "react-native": "0.59.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "metro-react-native-babel-preset": "^0.54.0"
+  }
+}

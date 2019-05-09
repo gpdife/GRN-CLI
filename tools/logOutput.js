@@ -11,7 +11,7 @@ const chalk = require('chalk');
 function error() {
 	const message = Array.prototype.slice.call(arguments).join(' ');
 	if (message) {
-		console.log(chalk.red("[crn-cli error]: " + message));
+		console.log(chalk.red("[grn-cli error]: " + message));
 	}
 }
 
@@ -21,7 +21,7 @@ function error() {
 function warn() {
 	const message = Array.prototype.slice.call(arguments).join(' ');
 	if (message) {
-		console.log(chalk.yellow("[crn-cli warn]: " + message));
+		console.log(chalk.yellow("[grn-cli warn]: " + message));
 	}
 }
 
@@ -31,7 +31,7 @@ function warn() {
 function log() {
 	const message = Array.prototype.slice.call(arguments).join(' ');
 	if (message) {
-		console.log("[crn-cli]: " + message);
+		console.log("[grn-cli]: " + message);
 	}
 }
 
